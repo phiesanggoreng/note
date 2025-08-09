@@ -1,69 +1,102 @@
-# React + TypeScript + Vite
+# NoteApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple note-taking application built with React, TypeScript, and Tailwind CSS.  
+Features include dark mode, markdown editing, badges, and user context.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create, edit, and delete notes
+- Markdown editor for notes
+- Badge system for achievements
+- Dark mode toggle
+- User context management
+- Responsive UI with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+frontend/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── App.css
+│   ├── vite-env.d.ts
+│   ├── assets/
+│   │   └── react.svg
+│   ├── Components/
+│   │   ├── BadgeList/
+│   │   │   └── BadgeList.tsx
+│   │   ├── DarkModeToggle/
+│   │   │   └── DarkModeToggle.tsx
+│   │   ├── MarkdownEditor/
+│   │   │   └── MarkdownEditor.tsx
+│   │   └── NoteCard/
+│   │       └── NoteCard.tsx
+│   ├── context/
+│   │   └── AppContext.tsx
+│   ├── types/
+│   │   └── index.ts
+│   └── utils/
+│       └── mockData.ts
+├── package.json
+├── vite.config.ts
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── eslint.config.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js (v18 or newer recommended)
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/USERNAME/REPOSITORY.git
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [react-router-dom](https://reactrouter.com/) (if used)
+
+## License
+
+MIT
+
+---
+
+Feel free to modify this README to fit your project needs.
