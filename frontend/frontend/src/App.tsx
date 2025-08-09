@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Toaster } from 'sonner'
-import { AppProvider } from './context/AppContext'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppProvider } from './context/AppContext';
 import Layout from './layouts/Layout';
-import Dashboard from './pages/Dashboard'
-import NoteDetail from './pages/NoteDetail'
-import NoteEditor from './pages/NoteEditor'
-import Stats from './pages/Stats'
-export function App() {
+import Dashboard from './pages/Dashboard';
+import NoteDetail from './pages/NoteDetail';
+import NoteEditor from './pages/NoteEditor';
+import Stats from './pages/Stats';
+import { Toaster } from 'sonner';
+import './index.css';
+
+export default function App() {
   return (
     <AppProvider>
       <Router>
@@ -26,5 +28,3 @@ export function App() {
     </AppProvider>
   );
 }
-
-export default App;
