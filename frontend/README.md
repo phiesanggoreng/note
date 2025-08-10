@@ -93,10 +93,3 @@ frontend/
 - [Lucide Icons](https://lucide.dev/)
 - [react-router-dom](https://reactrouter.com/) (if used)
 
-## License
-
-MIT
-
----
-
-Feel free to modify this README to fit your project needs.
